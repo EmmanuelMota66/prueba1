@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buenos Dias Yoselin :)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #ff7675;
+            --card-bg: rgba(255, 255, 255, 0.85);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            color: var(--primary-color);
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+            padding: 20px;
+            position: relative;
+            background-color: #eef2f7;
+            
+            /* Fondo vectorial integrado */
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="100%25" height="100%25" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%25" stop-color="%23dff9fb"/><stop offset="100%25" stop-color="%23ffffff"/></linearGradient><linearGradient id="hill1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%25" stop-color="%23badc58" stop-opacity="0.8"/><stop offset="100%25" stop-color="%236ab04c" stop-opacity="0.9"/></linearGradient><linearGradient id="hill2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%25" stop-color="%23ffeaa7" stop-opacity="0.85"/><stop offset="100%25" stop-color="%23fab1a0" stop-opacity="0.9"/></linearGradient><linearGradient id="hill3" x1="0" y1="1" x2="1" y2="0"><stop offset="0%25" stop-color="%2374b9ff" stop-opacity="0.7"/><stop offset="100%25" stop-color="%23a29bfe" stop-opacity="0.8"/></linearGradient><filter id="sketch"><feGaussianBlur stdDeviation="1" result="blur"/><feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" result="noise"/><feDisplacementMap in="SourceGraphic" in2="noise" scale="4" xChannelSelector="R" yChannelSelector="G"/></filter></defs><rect width="1200" height="800" fill="url(%23sky)"/><path d="M-100 550 Q 200 420 500 530 T 1300 480 L 1300 800 L -100 800 Z" fill="url(%23hill2)" filter="url(%23sketch)"/><path d="M-100 620 Q 350 500 800 640 T 1300 580 L 1300 800 L -100 800 Z" fill="url(%23hill1)" filter="url(%23sketch)"/><path d="M150 700 Q 500 580 900 710 T 1400 660 L 1400 800 L150 800 Z" fill="url(%23hill3)" filter="url(%23sketch)"/><g id="houses" filter="url(%23sketch)"><g transform="translate(80, 420)"><rect width="70" height="70" fill="%23fab1a0" rx="5"/><path d="M-10 0 L 35 -35 L 80 0 Z" fill="%23e17055"/><rect x="25" y="35" width="20" height="35" fill="%236c5ce7"/><circle cx="15" cy="20" r="7" fill="%23fff"/><circle cx="55" cy="20" r="7" fill="%23fff"/></g><g transform="translate(260, 450)"><rect width="60" height="80" fill="%23ffeaa7" rx="4"/><path d="M-8 0 L 30 -40 L 68 0 Z" fill="%23fdcb6e"/><rect x="18" y="45" width="24" height="35" fill="%23ff7675"/><rect x="20" y="15" width="20" height="18" fill="%23fff"/></g><g transform="translate(850, 480)"><rect width="80" height="70" fill="%2381ecec" rx="6"/><path d="M-10 0 L 40 -35 L 90 0 Z" fill="%2300cec9"/><rect x="30" y="35" width="20" height="35" fill="%23fd79a8"/><circle cx="25" cy="20" r="8" fill="%23fff"/></g><g transform="translate(1020, 520)"><rect width="65" height="75" fill="%23a29bfe" rx="5"/><path d="M-5 0 L 32.5 -35 L 70 0 Z" fill="%236c5ce7"/><rect x="22" y="40" width="20" height="35" fill="%23ffeaa7"/><rect x="20" y="15" width="25" height="15" fill="%23fff"/></g></g><g id="flowers" filter="url(%23sketch)"><circle cx="50" cy="650" r="9" fill="%23ff7675"/><path d="M50 640 Q 50 660 50 660" stroke="%232ecc71" stroke-width="3"/><circle cx="120" cy="710" r="7" fill="%23fdcb6e"/><circle cx="180" cy="680" r="11" fill="%23fd79a8"/><circle cx="220" cy="730" r="8" fill="%23a29bfe"/><circle cx="780" cy="690" r="10" fill="%23ff7675"/><circle cx="830" cy="740" r="7" fill="%23ffeaa7"/><circle cx="950" cy="700" r="12" fill="%2300cec9"/><circle cx="1120" cy="730" r="9" fill="%23fd79a8"/></g></svg>');
+            background-size: cover;
+            background-position: center bottom;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            z-index: 1;
+        }
+
+        .main-container {
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            max-width: 360px;
+            text-align: center;
+            animation: fadeInBuild 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards, 
+                      floatAnimation 4.5s ease-in-out infinite 1.2s;
+        }
+
+        .note-card {
+            background: var(--card-bg);
+            padding: 35px 25px;
+            border: 1.5px solid #2c3e50;
+            border-radius: 16px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+            position: relative;
+            margin-bottom: 18px;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .note-card::before, .note-card::after {
+            content: '';
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            border: 2px solid var(--accent-color);
+        }
+        .note-card::before { top: -4px; left: -4px; border-right: none; border-bottom: none; }
+        .note-card::after { bottom: -4px; right: -4px; border-left: none; border-top: none; }
+
+        .phrase-box {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem;
+            line-height: 1.6;
+            color: #2c3e50;
+            min-height: 120px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Estilo para el saludo constante */
+        .greeting {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            color: var(--accent-color);
+            margin-bottom: 10px;
+        }
+
+        .phrase-text {
+            font-style: italic;
+        }
+
+        .clock-container {
+            font-weight: 400;
+            letter-spacing: 2px;
+            font-size: 0.75rem;
+            color: #2c3e50;
+            text-transform: uppercase;
+            background-color: var(--card-bg);
+            padding: 10px 22px;
+            border-radius: 30px;
+            display: inline-block;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255,255,255,0.6);
+        }
+
+        .clock-time {
+            font-weight: 600;
+            display: block;
+            font-size: 1.35rem;
+            margin-top: 3px;
+            letter-spacing: 1px;
+        }
+
+        @keyframes fadeInBuild {
+            0% { opacity: 0; transform: scale(0.92) translateY(25px); }
+            100% { opacity: 1; transform: scale(1) translateY(0); }
+        }
+
+        @keyframes floatAnimation {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-container">
+        <div class="note-card">
+            <div class="phrase-box">
+                <span class="greeting" id="live-greeting">Buenos días</span>
+                <span class="phrase-text" id="daily-phrase">Cargando perspectiva...</span>
+            </div>
+        </div>
+        
+        <div class="clock-container">
+            <span>La hora en la poderosisima ESIA</span>
+            <div class="clock-time" id="live-clock">00:00:00</div>
+        </div>
+    </div>
+
+    <script>
+        // --- 1. FRASES DE ARQUITECTOS FAMOSOS ---
+        const frasesArquitectos = [
+            "\"La arquitectura es el juego sabio, correcto y magnífico de los volúmenes bajo la luz.\" — Le Corbusier",
+            "\"La arquitectura comienza donde termina la ingeniería.\" — Mies van der Rohe",
+            "\"La originalidad consiste en el retorno al origen.\" — Antoni Gaudí",
+            "\"Menos es más.\" — Mies van der Rohe",
+            "\"La arquitectura debe hablar de su tiempo y su lugar, pero anhelar la eternidad.\" — Frank Gehry",
+            "\"No puedes simplemente colocar un edificio en un lugar; tienes que absorber lo que ves a tu alrededor.\" — Zaha Hadid",
+            "\"La arquitectura es una expresión de valores.\" — Norman Foster",
+            "\"El espacio arquitectónico solo cobra vida en presencia del ser humano que lo experimenta.\" — Tadao Ando"
+        ];
+
+        // --- 2. TUS FRASES PERSONALES (Agrega todas las que quieras aquí) ---
+        const frasesPersonales = [
+            "Aqui van las frases creadas por mi, pero no se me ah ocurrrido ni una jaja",
+            "Mucha suerteeeeeeeeee en tu dia :)"
+        ];
+
+        // Combinamos automáticamente ambas listas en un solo gran diccionario masivo
+        const todasLasFrases = frasesArquitectos.concat(frasesPersonales);
+
+        // --- LÓGICA DIARIA DE FRASE ---
+        function getDailyPhrase() {
+            const today = new Date();
+            const dateString = today.getFullYear().toString() + today.getMonth().toString() + today.getDate().toString();
+            
+            let hash = 0;
+            for (let i = 0; i < dateString.length; i++) {
+                hash = dateString.charCodeAt(i) + ((hash << 5) - hash);
+            }
+            
+            // Elige de forma inteligente una frase única por día combinando ambos catálogos
+            const index = Math.abs(hash) % todasLasFrases.length;
+            document.getElementById('daily-phrase').innerText = todasLasFrases[index];
+        }
+
+        // --- LÓGICA DE SALUDO DINÁMICO E INTELIGENTE ---
+        function updateGreeting() {
+            const now = new Date();
+            const hours = now.getHours();
+            let text = "¡Buenos días!";
+
+            if (hours >= 12 && hours < 19) {
+                text = "¡Buenas tardes!";
+            } else if (hours >= 19 || hours < 6) {
+                text = "¡Buenas noches!";
+            }
+            
+            document.getElementById('live-greeting').innerText = text;
+        }
+
+        // --- LÓGICA DEL RELOJ EN VIVO ---
+        function updateClock() {
+            const now = new Date();
+            let hours = now.getHours();
+            let minutes = now.getMinutes();
+            let seconds = now.getSeconds();
+
+            hours = hours < 10 ? '0' + hours : hours;
+            minutes = minutes < 10 ? '0' + minutes : minutes;
+            seconds = seconds < 10 ? '0' + seconds : seconds;
+
+            document.getElementById('live-clock').innerText = `${hours}:${minutes}:${seconds}`;
+            
+            // Mantiene el saludo siempre sincronizado con la hora del teléfono
+            updateGreeting(); 
+        }
+
+        // Inicialización
+        getDailyPhrase();
+        updateClock();
+        setInterval(updateClock, 1000); 
+    </script>
+</body>
+</html>
